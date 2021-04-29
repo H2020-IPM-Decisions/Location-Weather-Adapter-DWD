@@ -1,7 +1,23 @@
 # IPM Decisions Weather Adapter for Deutsche Wetterdienst (DWD)
-This software package builds a Docker image for a location based weather service that provides 27 hour weather forecasts from Deutsche Wetterdienst (DWD).
+This software package builds a Docker image for a location based weather service that provides 27 hour weather forecasts from Deutsche Wetterdienst (DWD), with a 2.5km resolution
 
-&copy; 2021 Met Norway and NIBIO
+![Map showing the covered area](./map.png "map showing the covered area")
+
+The area covered by this model/service
+
+![Example temperature map showing the covered area](./air_temp_ncview.png "Example temperature map showing the covered area")
+
+Example temperature map (using ncview on the NetCDF file generated from the sources)
+
+[Information about DWD's Open Data Server](https://www.dwd.de/EN/ourservices/opendata/opendata.html)
+
+Weather parameters returned
+* Air temperature (&deg;C)
+* Relative humidity (%)
+* Rainfall (mm)
+* Wind speed (m/s)
+
+&copy; Copyright 2021 Met Norway and NIBIO
 
 Authors: Frank Thomas Tveter (Met Norway) and Tor-Einar Skog (NIBIO)
 

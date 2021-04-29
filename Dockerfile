@@ -20,7 +20,7 @@ FROM ubuntu:20.04
 # Descriptions
 LABEL maintainer="tor-einar.skog@nibio.no"
 LABEL version="0.8"
-LABEL description="This is an image for the IPM Decisions DWD weather adapter"
+LABEL description="This is an image for the IPM Decisions DWD weather adapter for Germany"
 
 # Disable Prompt During Packages Installation
 ARG DEBIAN_FRONTEND=noninteractive
@@ -48,9 +48,6 @@ USER root
 # TODO: Replace the following line with GitHub checkout
 WORKDIR /opt/ipmdecisions/
 RUN git clone --single-branch --branch master https://github.com/H2020-IPM-Decisions/NetCDF-Location-Weather-Adapter.git
-#COPY ./netcdf_weather_adapter /opt/ipmdecisions/netcdf_weather_adapter
-COPY ./interpolator.py /opt/ipmdecisions/NetCDF-Location-Weather-Adapter/app/
-# TODO: Copy in the DWD specific Interpolator
 RUN chown -R ipmdecisions:ipmdecisions /opt/ipmdecisions/NetCDF-Location-Weather-Adapter
 
 USER ipmdecisions
@@ -65,7 +62,7 @@ EXPOSE 80
 
 # Add the crontab to ipm decisions
 USER ipmdecisions
-RUN echo "0 * * * *  cd /opt/ipmdecisions/perl; ./run > ./download_log" | crontab
+RUN echo "30 * * * *  cd /opt/ipmdecisions/perl; ./run > ./download_log" | crontab
 
 # Start the gatekeeper
 USER root
