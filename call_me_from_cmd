@@ -25,3 +25,4 @@ su -s /bin/bash -c 'cd /opt/ipmdecisions/perl;./run > ./download.log' ipmdecisio
 # Start the gatekeeper process
 cd /opt/ipmdecisions/NetCDF-Location-Weather-Adapter/app
 su -s /bin/bash -c 'python3 gatekeeper.py' ipmdecisions
+
