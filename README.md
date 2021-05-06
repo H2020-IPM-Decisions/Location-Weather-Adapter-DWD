@@ -3,7 +3,7 @@ This software package builds a Docker image for a location based weather service
 
 ![Map showing the covered area](./map.png "map showing the covered area")
 
-The area covered by this model/service
+The approximate area covered by this model/service
 
 ![Example temperature map showing the covered area](./air_temp_ncview.png "Example temperature map showing the covered area")
 
