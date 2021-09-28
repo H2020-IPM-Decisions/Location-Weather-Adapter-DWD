@@ -476,8 +476,8 @@ if ($script && ($force || $processedafile)) {
 }
 
 if ($clean) {
-    if ($workDir) {clean($workDir,$clean,"1");}
-    if ($destDir) {clean($destDir,$clean,"1");}
+    if ($workDir) {clean($workDir,$clean,"+1");}
+    if ($destDir) {clean($destDir,$clean,"+1");}
 };
 
 #use Data::Dumper;
