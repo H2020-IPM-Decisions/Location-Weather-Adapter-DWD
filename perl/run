@@ -7,7 +7,7 @@
 	     -w tmpdir \
 	     -o outdir \
 	     -b /weather/nwp/icon-d2/grib/* \
-	     -c "*.grib" \
+	     -c "*.grib*" \
 	     -s anonymous@opendata.dwd.de:post@ipmdecisions.net \
 	     -x postprocess.pl@../outdir/all.nc \
 	     /weather/nwp/icon-d2/grib/00/relhum_2m/*regular* \
